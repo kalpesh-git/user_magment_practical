@@ -15,6 +15,7 @@ Here is steps for run this project
 Step 1: Database Configuration
 
 => Change database username and password in .env file
+
 ONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
