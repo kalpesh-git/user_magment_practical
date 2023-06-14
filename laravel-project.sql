@@ -23,6 +23,9 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
+
+CREATE DATABASE laravel-project;
+
 --
 -- Table structure for table `failed_jobs`
 --
