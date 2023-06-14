@@ -13,7 +13,7 @@ Here is steps for run this project
 =================================
 
 
-Step 1: Database Configuration
+**Step 1: Database Configuration**
 
 => Change database username and password in .env file
 
@@ -29,31 +29,28 @@ DB_USERNAME=root
 
 DB_PASSWORD=password
 
-Step 2: Run migration
+**Step 2: Run migration**
 
 => 
 php artisan migrate
 
 
-Step 3: Run Seeder
-
+**Step 3: Run Seeder**
 =>
 php artisan db:seed --class=CreateUsersSeeder
 
-Step 4: Install npm & run dev
-
+**Step 4: Install npm & run dev**
 =>  i) npm i 
        ii) npm run dev
 	
 
-Step 5: Run Server
+**Step 5: Run Server**
 
 => Open new terminal and run this command
      
      php artisan serve
 
- Step 6: Run laravel application  
-
+**** Step 6: Run laravel application ****
 =>  Now goto you web browser and Type the given URL
 
       http://127.0.0.1:8000/
