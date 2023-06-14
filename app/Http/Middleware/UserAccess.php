@@ -16,6 +16,14 @@ class UserAccess
      */
     public function handle(Request $request, Closure $next, $userType)
     {
+        $userInput = $request->all();
+       
+        array_walk_recursive($userInput, function (&$userInput) {
+            $userInput = strip_tags($userInput);
+        });
+        
+        $request->merge($userInput);
+         
         if(auth()->user()->type == $userType){
             return $next($request);
         }
