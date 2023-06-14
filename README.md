@@ -81,7 +81,7 @@ pass : 123456
 email : rayan@gmail.com
 pass : 123456
 
-test SQL FILE 
+SQL FILE 
 ==================================
 
 If you want a import test data so you can import data using **laravel-project.sql** which is located in root 
