@@ -10,10 +10,10 @@ Composer Version : 2.3.5
 
 # Here is steps for run this project
 
-**Step 1: Create .env file**
+**Step 1: Create .env file & generate key**
 
-cp .env.example .env
-php artisan key:generate
+1) cp .env.example .env
+2) php artisan key:generate
 
 **Step 2: Database Configuration**
 
