@@ -24,12 +24,14 @@ DB_PASSWORD=password
 
 Step 2: Run migration
 
-=> php artisan migrate
+=> 
+php artisan migrate
 
 
 Step 3: Run Seeder
 
-=> php artisan db:seed --class=CreateUsersSeeder
+=>
+php artisan db:seed --class=CreateUsersSeeder
 
 Step 4: Install npm & run dev
 
