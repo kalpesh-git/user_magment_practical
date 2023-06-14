@@ -18,10 +18,15 @@ Step 1: Database Configuration
 => Change database username and password in .env file
 
 ONNECTION=mysql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3306
+
 DB_DATABASE=laravel-project
+
 DB_USERNAME=root
+
 DB_PASSWORD=password
 
 Step 2: Run migration
