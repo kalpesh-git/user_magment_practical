@@ -10,7 +10,12 @@ Composer Version : 2.3.5
 
 # Here is steps for run this project
 
-**Step 1: Database Configuration**
+**Step 1: Create .env file**
+
+cp .env.example .env
+php artisan key:generate
+
+**Step 2: Database Configuration**
 
 => Change database username and password in .env file
 
@@ -26,26 +31,26 @@ DB_USERNAME=root
 
 DB_PASSWORD=password
 
-**Step 2: Run migration**
+**Step 3: Run migration**
 
 php artisan migrate
 
-**Step 3: Run Seeder**
+**Step 4: Run Seeder**
 
 php artisan db:seed --class=CreateUsersSeeder
 
-**Step 4: Install npm & run dev**
+**Step 5: Install npm & run dev**
 
-=> i) npm i
-ii) npm run dev
+=> 1) npm i
+2) npm run dev
 
-**Step 5: Run Server**
+**Step 6: Run Server**
 
 => Open new terminal and run this command
 
      php artisan serve
 
-**Step 6: Run laravel application**
+**Step 7: Run laravel application**
 
 => Now goto you web browser and Type the given URL
 
