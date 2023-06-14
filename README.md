@@ -37,11 +37,13 @@ php artisan migrate
 
 
 **Step 3: Run Seeder**
+
 =>
 
 php artisan db:seed --class=CreateUsersSeeder
 
 **Step 4: Install npm & run dev**
+
 =>  i) npm i 
        ii) npm run dev
 	
@@ -75,18 +77,23 @@ Login Credentials
 **For Admin**
 
 email : admin@gmail.com
+
 pass : 123456
 
 **For User**
 
 email : kalpesh@gmail.com
+
 pass : 123456
 
 email : hayaan@gmail.com
+
 pass : 123456
 
 email : alex@gmail.com
+
 pass : 123456
 
 email : rayan@gmail.com
+
 pass : 123456 
