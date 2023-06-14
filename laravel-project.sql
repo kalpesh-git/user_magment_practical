@@ -18,19 +18,19 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `laravel-project`
+-- Database: `userManagment`
 --
 
 -- --------------------------------------------------------
-
-
-CREATE DATABASE laravel-project;
 
 --
 -- Table structure for table `failed_jobs`
 --
 
-CREATE TABLE `failed_jobs` (
+-- CREATE DATABASE userManagment;
+
+
+CREATE TABLE userManagment.failed_jobs (
   `id` bigint UNSIGNED NOT NULL,
   `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE `failed_jobs` (
 -- Table structure for table `migrations`
 --
 
-CREATE TABLE `migrations` (
+CREATE TABLE userManagment.migrations (
   `id` int UNSIGNED NOT NULL,
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL
@@ -56,7 +56,7 @@ CREATE TABLE `migrations` (
 -- Dumping data for table `migrations`
 --
 
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+INSERT INTO userManagment.migrations (`id`, `migration`, `batch`) VALUES
 (53, '2014_10_12_000000_create_users_table', 1),
 (54, '2014_10_12_100000_create_password_resets_table', 1),
 (55, '2019_08_19_000000_create_failed_jobs_table', 1),
@@ -69,7 +69,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- Table structure for table `password_resets`
 --
 
-CREATE TABLE `password_resets` (
+CREATE TABLE userManagment.password_resets (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
@@ -81,7 +81,7 @@ CREATE TABLE `password_resets` (
 -- Table structure for table `personal_access_tokens`
 --
 
-CREATE TABLE `personal_access_tokens` (
+CREATE TABLE userManagment.personal_access_tokens (
   `id` bigint UNSIGNED NOT NULL,
   `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tokenable_id` bigint UNSIGNED NOT NULL,
@@ -100,7 +100,7 @@ CREATE TABLE `personal_access_tokens` (
 -- Table structure for table `tasks`
 --
 
-CREATE TABLE `tasks` (
+CREATE TABLE userManagment.tasks (
   `id` bigint UNSIGNED NOT NULL,
   `userId` int NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE `tasks` (
 -- Dumping data for table `tasks`
 --
 
-INSERT INTO `tasks` (`id`, `userId`, `title`, `description`, `created_at`, `updated_at`) VALUES
+INSERT INTO userManagment.tasks (`id`, `userId`, `title`, `description`, `created_at`, `updated_at`) VALUES
 (1, 2, 'kalpesh task 1', 'kalpesh task 1 desc', '2023-06-14 07:46:39', '2023-06-14 07:46:39'),
 (2, 3, 'hayaan task 1', 'hayaan task 1 desc', '2023-06-14 07:47:19', '2023-06-14 07:47:19'),
 (3, 3, 'hayaan task 2', 'hayaan task 2 desc', '2023-06-14 07:47:29', '2023-06-14 07:47:29'),
@@ -127,7 +127,7 @@ INSERT INTO `tasks` (`id`, `userId`, `title`, `description`, `created_at`, `upda
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE userManagment.users (
   `id` bigint UNSIGNED NOT NULL,
   `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -146,92 +146,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `email_verified_at`, `password`, `type`, `status`, `last_login`, `remember_token`, `created_at`, `updated_at`) VALUES
+INSERT INTO userManagment.users (`id`, `first_name`, `last_name`, `email`, `email_verified_at`, `password`, `type`, `status`, `last_login`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Admin', 'user', 'admin@gmail.com', NULL, '$2y$10$Kq3FLkPq1yDbnt0MYBCkju0CQlirtLQslXA58lLH.eOZmZyb4h8nS', 1, 'enable', '2023-06-14 11:32:12', NULL, '2023-06-14 06:02:12', '2023-06-14 06:02:12'),
 (2, 'kalpesh', 'morker', 'kalpesh@gmail.com', NULL, '$2y$10$DExaCye7hhphjBdctsVvUeFGh4TpgvSPSGL0Yfz8C12suLbsJAB46', 0, 'disabled', '2023-06-10 06:09:42', NULL, '2023-06-14 06:02:12', '2023-06-14 06:09:42'),
 (3, 'hayaan', 'patel', 'hayaan@gmail.com', NULL, '$2y$10$4o6jMYUMyYxLnK0auew8GOhFXJ.nlzmklnUyAFKQimMfWcnEg9k5e', 0, 'enable', '2023-06-14 07:59:23', NULL, '2023-06-14 06:02:12', '2023-06-14 07:59:23'),
 (4, 'alex', 'parker', 'alex@gmail.com', NULL, '$2y$10$3UWtwX7o.3eBvMbL.LFHiO/hLdsMAigRyjeftSKz0RkD5djdZeHgu', 0, 'enable', '2023-06-14 07:45:38', NULL, '2023-06-14 06:02:12', '2023-06-14 07:45:38'),
 (5, 'rayan', 'brain', 'rayan@gmail.com', NULL, '$2y$10$kGpIzHn8OEex.rAZv7FvpegZrgOKXYYQl7zJYx37APRG/oMxetwVa', 0, 'enable', '2023-06-14 06:10:31', NULL, '2023-06-14 06:02:12', '2023-06-14 06:10:31');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
-
---
--- Indexes for table `migrations`
---
-ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `password_resets`
---
-ALTER TABLE `password_resets`
-  ADD KEY `password_resets_email_index` (`email`);
-
---
--- Indexes for table `personal_access_tokens`
---
-ALTER TABLE `personal_access_tokens`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
-  ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
-
---
--- Indexes for table `tasks`
---
-ALTER TABLE `tasks`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `migrations`
---
-ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
-
---
--- AUTO_INCREMENT for table `personal_access_tokens`
---
-ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tasks`
---
-ALTER TABLE `tasks`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+ 
