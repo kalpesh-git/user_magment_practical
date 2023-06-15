@@ -1,4 +1,4 @@
-# User Magment Practical
+# User Management
 
 I develop this project using laravel framework
 
