@@ -1,4 +1,4 @@
-# user_magment_practical
+# User Magment Practical
 
 I develop this project using laravel framework
 
